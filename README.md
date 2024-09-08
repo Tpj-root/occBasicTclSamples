@@ -54,14 +54,16 @@ set (USE_EIGEN     OFF CACHE BOOL "${USE_EIGEN_DESCR}")
 		root> cd /etc/ld.so.conf.d/
 		root> echo '/path_to/opencascade/install/lib' > opencascade.conf
 		root> ldconfig
+		```
 
-
-export CASROOT=/usr/local/bin
-export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
-
+		```
+		export CASROOT=/usr/local/bin
+		export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
+		```
 
 		
 * occBasicSamples
+
 	```
 	user> git clone https://github.com/quirxi/occBasicSamples.git
 	user> cd occBasicSamples/src
@@ -73,10 +75,24 @@ export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
 			g++ -c -pipe -O3 -std=c++11 -Wall -W -g -D_REENTRANT -I../include/opencascade -o main.o main.cpp
 			g++  -o aBox.exe main.o -L../lib   -lTKernel -lTKPrim -lTKTopAlgo -lTKSTL -lTKVRML -lTKBRep -lTKG3d -lTKMesh
 	user> ./aBox.exe 
-		
+	```
 		
 		
 ## Available examples
+
+## How to run
+
+        Paste the TCL folder to the following location: 
+
+	```
+	/usr/local/share/opencascade/samples/tcl/
+
+
+        cd /usr/local/share/opencascade/samples/tcl/
+        DRAWEXE and press Enter
+        source ANC101.tcl
+	```
+
 
 Up to now there are examples for following basic shapes and tcl_script available:
 
@@ -143,6 +159,31 @@ Up to now there are examples for following basic shapes and tcl_script available
 * https://github.com/quirxi/occBasicSamples
 
 
+## Fix library errors
+
+	```
+	git clone https://github.com/Tpj-root/occBasicTclSamples.git 
+	cd occBasicTclSamples/src
+	make
+	```
+
+**`Box:`**
+![Box](docs/aBox.png)
+
+**`Circle:`**
+![Circle](docs/aCircle.png)
+
+**`Cone:`**
+![Cone](docs/aCone.png)
+
+**`Cylinder:`**
+![Cylinder](docs/aCylinder.png)
+
+**`Sphere:`**
+![Sphere](docs/aSphere.png)
+
+**`Torus:`**
+![Torus](docs/aTorus.png)
 
 
 
