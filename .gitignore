@@ -3,6 +3,9 @@
 *.exe
 *.so
 *.a
+*.stl
+*.stp
+*.wrl
 # Ignore all log files
 *.log
 

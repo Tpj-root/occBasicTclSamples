@@ -10,13 +10,13 @@ ENDING_HEADER := hpp
 
 # ---> Is the target a shared lib, a static lib or a executable ?
 TARGETTYPE      := executable
-TARGETTYPE      := sharedlib
-TARGETTYPE      := staticlib
+#TARGETTYPE      := sharedlib
+#TARGETTYPE      := staticlib
 
 # ---> The name of the shared lib, static lib or executable:
 TARGETNAME      := aBox.exe
-TARGETNAME      := libMyLib.so
-TARGETNAME      := libMyLib.a
+#TARGETNAME      := libMyLib.so
+#TARGETNAME      := libMyLib.a
 # ---> Compileroptions
 CC              := gcc
 CXX             := g++
