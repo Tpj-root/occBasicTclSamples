@@ -15,7 +15,7 @@ TARGETTYPE      := executable
 
 # ---> The name of the shared lib, static lib or executable:
 TARGETNAME      := aCone.exe
-TARGETNAME      := libMyLib.so
+#TARGETNAME      := libMyLib.so
 #TARGETNAME      := libMyLib.a
 # ---> Compileroptions
 CC              := gcc
