@@ -1,6 +1,8 @@
 # Ignore all object files
 *.o
-
+*.exe
+*.so
+*.a
 # Ignore all log files
 *.log
 

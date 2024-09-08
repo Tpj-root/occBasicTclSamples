@@ -15,7 +15,7 @@ TARGETTYPE      := executable
 
 # ---> The name of the shared lib, static lib or executable:
 TARGETNAME      := aCone.exe
-#TARGETNAME      := libMyLib.so
+TARGETNAME      := libMyLib.so
 #TARGETNAME      := libMyLib.a
 # ---> Compileroptions
 CC              := gcc
@@ -26,7 +26,8 @@ INCPATH         := -I../include/opencascade
 # ---> Linkeroptions
 LINK            := g++
 LFLAGS          := # -fPIC
-LIBS            := -lTKernel -lTKPrim -lTKTopAlgo -lTKSTL -lTKVRML -lTKSTEP -lTKBRep -lTKG3d -lTKMesh
+LIBS             := -lTKernel -lTKPrim -lTKTopAlgo -lTKDESTL -lTKDEVRML -lTKDESTEP -lTKBRep -lTKG3d -lTKMesh
+LDFLAGS := -L/usr/local/lib
 LIBPATH         := -L../lib  
 # ---> Options for a shared library
 SHARE_LIB_FLAG  := -shared -W1,-soname,
