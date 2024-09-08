@@ -7,9 +7,14 @@ Very basic OpenCASCADE examples that compile with g++
 Debian 11 (bullseye) was used as operating system.
 
 ```
-  root> apt-get install g++ cmake cmake-curses-gui
-  root> apt-get install tcllib tklib tcl-dev tk-dev libfreetype-dev libxt-dev libxmu-dev libxi-dev libgl1-mesa-dev libglu1-mesa-dev libfreeimage-dev libtbb-dev libgl2ps-dev 
-  root> apt-get install doxygen graphviz
+
+sudo apt-get install g++ cmake cmake-curses-gui
+sudo apt-get install tcllib tklib tcl-dev tk-dev libfreetype-dev libxt-dev libxmu-dev libxi-dev libgl1-mesa-dev libglu1-mesa-dev libfreeimage-dev libtbb-dev libgl2ps-dev
+sudo apt-get install doxygen graphviz
+sudo apt-get install libavcodec-dev libavformat-dev libavutil-dev libopenvr-dev libdraco-dev libeigen3-dev
+sudo apt-get install libx11-dev rapidjson-dev ffmpeg
+
+
 ```
  
  
@@ -25,7 +30,9 @@ Debian 11 (bullseye) was used as operating system.
 		user> mkdir build
 		
 
-		
+```	
+# https://github.com/tpaviot/oce/issues/744
+
 # whether use optional 3rdparty or not
 set (USE_TK        ON  CACHE BOOL "${USE_TK_DESCR}")
 set (USE_FREETYPE  ON  CACHE BOOL "${USE_FREETYPE_DESCR}")
@@ -36,9 +43,7 @@ set (USE_RAPIDJSON OFF CACHE BOOL "${USE_RAPIDJSON_DESCR}")
 set (USE_DRACO     OFF CACHE BOOL "${USE_DRACO_DESCR}")
 set (USE_TBB       OFF CACHE BOOL "${USE_TBB_DESCR}")
 set (USE_EIGEN     OFF CACHE BOOL "${USE_EIGEN_DESCR}")
-
-
-
+```
 
 
 	* Compile:
@@ -83,6 +88,19 @@ set (USE_EIGEN     OFF CACHE BOOL "${USE_EIGEN_DESCR}")
 ## How to run
 
         Paste the TCL folder to the following location: 
+
+	```
+
+sab@SH4D0W6:/usr/local/share/opencascade/samples/tcl$ ls
+ANC101.tcl  DataExchangeDemo.tcl  logo2019.tcl                                 Penrose.tcl                        
+bottle.tcl  dimensions.tcl        markers.tcl            pathtrace_ball.tcl       raytrace.tcl                      xde.tcl
+cad.tcl     drill.tcl             materials.tcl          pathtrace_cube.tcl       Readme.txt     
+cpu.tcl                       MBBGehauseRohteil.tcl  pathtrace_materials.tcl  snowflake.tcl  vis_pbr_spheres.tcl
+cutter.tcl                  ModelingDemo.tcl       pencil.tcl               spheres.tcl    VisualizationDemo.tcl
+
+	```
+	
+Dir list --- > iges  images  occ  step  stl  vrml src
 
 	```
 	/usr/local/share/opencascade/samples/tcl/
@@ -192,5 +210,21 @@ Up to now there are examples for following basic shapes and tcl_script available
 
 
 
+## How to remove all files OpenCASCADE 
 
+	```
+
+sudo rm -rf /usr/local/share/doc/opencascade
+sudo rm -rf /usr/local/include/opencascade
+sudo rm -rf /usr/local/share/opencascade
+sudo rm -rf /usr/local/lib/cmake/opencascade
+sudo rm -rf /usr/local/lib/
+
+sudo rm /usr/local/bin/draw.sh
+sudo rm /usr/local/bin/custom_gcc_64.sh
+sudo rm /usr/local/bin/env.sh
+
+sudo rm /usr/local/bin/DRAWEXE
+
+	```
 		
